@@ -1,0 +1,29 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /api/v1/
+spring:
+  datasource:
+    url: jdbc:h2:file:./src/main/resources/atm;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+  h2:
+    console:
+      enabled: true
+jwt:
+  secret: BvPHGM8C0ia4uOuxxqPD5DTbWC9F9TWvPStp3pb7ARo0oK2mJ3pd3YG4lxA9i8bj6OTbadwezxgeEByY
+  expiration: 604800
+cash:
+  nominal:
+      fifty:
+        amount: 100
+      hundred:
+        amount: 100
+      two-hundred:
+        amount: 100
+
